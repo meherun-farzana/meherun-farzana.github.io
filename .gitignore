@@ -48,3 +48,8 @@ _zip
 /_sass/*/__*__/*
 *:Zone.Identifier
 *.Zone.Identifier
+.bundle/
+vendor/
+_site/
+.jekyll-cache/
+.sass-cache/
