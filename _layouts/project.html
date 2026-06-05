@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<div class="projects-page">
+  <header class="page-header">
+    <h1>{{ page.title | upcase }}</h1>
+
+    {% if page.description %}
+    <div class="projects-intro">
+      {{ page.description }}
+    </div>
+    {% endif %}
+  </header>
+
+  {% include sections/projects.html %}
+</div>

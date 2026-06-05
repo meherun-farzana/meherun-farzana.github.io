@@ -1,0 +1,222 @@
+# Config
+# ========================================================================================
+
+url: "https://reckless-meherun.github.io"
+baseurl: ""
+lang: en
+
+title: "Meherun Farzana"
+description: >
+  Personal academic portfolio of Meherun Farzana, featuring research projects,
+  publications, interests, and updates in AI, NLP, and related areas.
+
+tagline: "Computer Science · NLP · AI"
+
+keywords:
+  - AI
+  - NLP
+  - Machine Learning
+  - Deep Learning
+  - Research
+  - Bangla NLP
+
+logo: /assets/img/logo.jpg
+
+author:
+  name: "Meherun Farzana"
+  email: "meherun2001@gmail.com"
+
+menu:
+  - title: Home
+    url: /#home
+  - title: News
+    url: /#news
+  - title: Research
+    url: /#research
+  - title: Projects
+    url: /#projects
+  # - title: CV
+  #   url: /cv/
+
+legal: []
+
+# copyright: "© 2026 Meherun Farzana."
+
+permalink: /:categories/:year-:month-:day-:title/
+
+paginate: 10
+paginate_path: /page/:num/
+
+theme: jekyll-theme-hydejack
+
+accent_image: /assets/img/sidebar-bg.jpg
+accent_color: rgb(79,177,186)
+theme_color: rgb(25,55,71)
+
+defaults:
+  - scope:
+      path: assets/
+    values:
+      sitemap: false
+
+  - scope:
+      path: licenses/
+    values:
+      layout: plain
+      sitemap: false
+
+  - scope:
+      type: projects
+    values:
+      seo:
+        type: WebPage
+
+  - scope:
+      type: featured_categories
+    values:
+      seo:
+        type: WebPage
+
+  - scope:
+      type: featured_tags
+    values:
+      seo:
+        type: WebPage
+
+kramdown:
+  math_engine: katex
+  math_engine_opts: {}
+  footnote_backlink: "&#x21a9;&#xfe0e;"
+
+hydejack:
+  post_addons: [related]
+  project_addons: [other]
+  no_mark_external: false
+  no_push_state: false
+  no_drawer: false
+  no_navbar: false
+  no_search: false
+  no_inline_css: false
+  no_page_style: false
+  no_break_layout: true
+  no_toc: false
+  no_third_column: false
+  no_large_headings: false
+  no_structured_data: false
+  no_theme_color: false
+  no_breadcrumbs: false
+  use_lsi: true
+  cookies_banner: false
+  advertise: false
+  hide_dates: false
+  hide_last_modified: false
+
+  dark_mode:
+    always: false
+    dynamic: false
+    icon: true
+
+  offline:
+    enabled: false
+    cache_version: 13
+    precache_assets:
+      - /assets/img/swipe.svg
+
+collections:
+  featured_categories:
+    permalink: /:name/
+    output: true
+
+  featured_tags:
+    permalink: /tag-:name/
+    output: true
+
+  projects:
+    permalink: /projects/:path/
+    output: true
+
+  publications:
+    output: true
+    permalink: /research/:name/
+
+exclude:
+  - .jekyll-cache
+  - .sass-cache
+  - .ruby-lsp
+  - .wrangler
+  - "*.toml"
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - functions
+  - docs
+  - example
+
+include:
+  - _routes.json
+  - .well-known
+  - LICENSE.md
+
+plugins:
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+  - jekyll-last-modified-at
+
+optional_front_matter:
+  remove_originals: true
+
+readme_index:
+  remove_originals: true
+  with_frontmatter: true
+
+relative_links:
+  collections: true
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+compress_html:
+  comments: ["<!--", "-->"]
+  clippings: all
+  endings: all
+  ignore:
+    envs: [development]
+
+sass:
+  style: compressed
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      layout: post
+      description: >
+        Draft post description.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+
+    posts:
+      layout: post
+      description: >
+        Post description.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+
+    projects:
+      layout: project
+      description: >
+        Project description.
+      image:
+        path: /assets/img/sidebar-bg.jpg
+      links:
+        - title: Project Link
+          url: https://example.com

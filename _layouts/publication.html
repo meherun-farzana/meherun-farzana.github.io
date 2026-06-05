@@ -1,0 +1,155 @@
+---
+layout: base
+---
+
+<style>
+    .publication-page {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .publication-title {
+        margin: 0 0 0.75rem 0;
+        line-height: 1.12;
+    }
+
+    .publication-last-modified {
+        color: var(--gray);
+        font-weight: 1000;
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .publication-cover {
+        margin-bottom: 1.5rem;
+    }
+
+    .publication-cover img {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 0.5rem;
+        display: block;
+    }
+
+    .publication-description-block {
+        margin: 0 0 1.5rem 0;
+        padding-left: 1rem;
+        border-left: 5px solid rgb(182, 180, 180);
+        font-size: 1.02rem;
+        line-height: 1.9;
+        font-weight: 600;
+        opacity: 0.92;
+    }
+
+    .publication-meta {
+        margin-bottom: 2rem;
+    }
+
+    .publication-meta p {
+        margin: 0.35rem 0;
+        line-height: 1.7;
+    }
+
+    .publication-meta strong {
+        font-weight: 700;
+    }
+
+    .publication-links a {
+        margin-right: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .publication-body section {
+        margin-bottom: 2rem;
+    }
+
+    .publication-body h2 {
+        margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+        .publication-cover img {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<article class="publication-page">
+    <header>
+        <h1 class="publication-title">{{ page.title }}</h1>
+
+        {% unless site.hydejack.hide_dates or site.hydejack.hide_last_modified or page.hide_last_modified %}
+        {% if page.last_modified_at %}
+        {% assign d1 = page.date | date: "%d-%m-%Y" %}
+        {% assign d2 = page.last_modified_at | date: "%d-%m-%Y" %}
+        {% if d1 != d2 %}
+        {% assign last_modified_at_format = site.data.strings.date_formats.last_modified_at | default: "%d-%m-%Y" %}
+        <div class="publication-last-modified">
+            <span class="lastmod-inline">
+                <span class="{{ site.data.strings.last_modified_icon | default: 'icon-history' }}"></span>
+                <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+                    {{ page.last_modified_at | date: last_modified_at_format }}
+                </time>
+            </span>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endunless %}
+
+        {% if page.image %}
+        <div class="publication-cover">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+
+        <!-- {% if page.description %}
+        <div class="publication-description-block">
+            {{ page.description }}
+        </div>
+        {% endif %} -->
+
+        <div class="publication-meta">
+            {% if page.venue %}
+            <p><strong>Venue:</strong> {{ page.venue }}</p>
+            {% endif %}
+
+            {% if page.authors %}
+            <p><strong>Authors:</strong> {{ page.authors }}</p>
+            {% endif %}
+
+            <p class="publication-links">
+                <strong>Links:</strong>
+                {% if page.paper_link %}
+                <a href="{{ page.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+                {% endif %}
+                {% if page.website_link %}
+                <a href="{{ page.website_link }}" target="_blank" rel="noopener">Website</a>
+                {% endif %}
+                {% if page.code_link %}
+                <a href="{{ page.code_link | relative_url }}" target="_blank" rel="noopener">Code</a>
+                {% endif %}
+            </p>
+        </div>
+    </header>
+
+    <div class="publication-body">
+        <section id="abstract">
+            <h2>Abstract</h2>
+            {% if page.abstract %}
+            <p>{{ page.abstract }}</p>
+            {% else %}
+            {{ content }}
+            {% endif %}
+        </section>
+
+        {% if page.abstract %}
+        <section id="details">
+            {{ content }}
+        </section>
+        {% endif %}
+    </div>
+</article>

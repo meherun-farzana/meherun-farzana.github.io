@@ -1,0 +1,107 @@
+{% assign publications = site.publications | sort: "date" | reverse %}
+{% assign preprints = publications | where: "status", "preprint" %}
+{% assign published = publications | where: "status", "publication" %}
+
+<h2 class="section-title" id="preprints">Preprints</h2>
+<div class="publication-list">
+  {% for pub in preprints %}
+  <article id="{{ pub.slug }}" class="publication-card">
+    <div class="publication-row">
+      {% if pub.image %}
+      <div class="publication-media">
+        <a href="{{ pub.url | relative_url }}">
+          <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="publication-content">
+        <p class="publication-title">
+          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </p>
+        {% if pub.venue %}
+        <p class="publication-meta"><strong>Venue:</strong> {{ pub.venue }}</p>
+        {% endif %}
+
+        {% if pub.authors %}
+        <p class="publication-meta"><strong>Authors:</strong> {{ pub.authors }}</p>
+        {% endif %}
+
+        <div class="publication-footer">
+          <div class="publication-links">
+            {% if pub.paper_link %}
+            <a href="{{ pub.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+            {% endif %}
+
+            {% if pub.website_link %}
+            <a href="{{ pub.website_link }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+
+            {% if pub.code_link %}
+            <a href="{{ pub.code_link }}" target="_blank" rel="noopener">Code</a>
+            {% endif %}
+          </div>
+
+          <div class="publication-continue">
+            <a href="{{ pub.url | relative_url }}#abstract">Continue to Abstract &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+<h2 class="section-title" id="publications">Publications</h2>
+<div class="publication-list">
+  {% for pub in published %}
+  <article id="{{ pub.slug }}" class="publication-card">
+    <div class="publication-row">
+      {% if pub.image %}
+      <div class="publication-media">
+        <a href="{{ pub.url | relative_url }}">
+          <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="publication-content">
+        <p class="publication-title">
+          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </p>
+        {% if pub.venue %}
+        <p class="publication-meta"><strong>Venue:</strong> {{ pub.venue }}</p>
+        {% endif %}
+
+        {% if pub.authors %}
+        <p class="publication-meta"><strong>Authors:</strong> {{ pub.authors }}</p>
+        {% endif %}
+
+        <div class="publication-footer">
+          <div class="publication-links">
+            {% if pub.paper_link %}
+            <a href="{{ pub.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+            {% endif %}
+
+            {% if pub.website_link %}
+            <a href="{{ pub.website_link }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+
+            {% if pub.code_link %}
+            <a href="{{ pub.code_link }}" target="_blank" rel="noopener">Code</a>
+            {% endif %}
+          </div>
+
+          <div class="publication-continue">
+            <a href="{{ pub.url | relative_url }}#abstract">Continue to Abstract &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if published.size == 0 %}
+<p><i>Yet to come.</i></p>
+{% endif %}

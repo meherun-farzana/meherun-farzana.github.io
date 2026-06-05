@@ -1,0 +1,19 @@
+---
+layout: base
+---
+
+<div class="publications-page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.description %}
+    <div class="publications-intro">
+      {{ page.description }}
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </header>
+
+  {% include sections/research.html %}
+</div>
