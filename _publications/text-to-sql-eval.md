@@ -9,7 +9,7 @@ description: >
   </ul>
 image: /assets/img/publications/qsem_archi.jpg
 venue: <strong>EMNLP Main Track 2026</strong> <i>(under review)</i>
-authors: <strong>Md. Mahmudul Hasan*</strong>, <strong>Meherun Farzana*</strong>, Mehrajul Abadin Miraj, Aniket Joarder, Mahmudul Hasan, Abir Chakraborty Partha, Md. Ahasanul Alam, Md. Tanvir Alam, Redwan Ahmed Rizvee, Md. Fahim Arefin, Md Mahmudur Rahman, Md. Mosaddek Khan
+authors: Md. Mahmudul Hasan*, <strong>Meherun Farzana*</strong>, Mehrajul Abadin Miraj, Aniket Joarder, Mahmudul Hasan, Abir Chakraborty Partha, Md. Ahasanul Alam, Md. Tanvir Alam, Redwan Ahmed Rizvee, Md. Fahim Arefin, Md Mahmudur Rahman, Md. Mosaddek Khan
 # paper_link: /assets/papers/qsem.pdf
 # website_link: https://bi.cognistorm.ai/login 
 date: 2026-05-25
