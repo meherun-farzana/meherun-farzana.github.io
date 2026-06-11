@@ -31,7 +31,7 @@ cover: true
 **Remote Research Intern**<br>
 *2026 - Present*<br>
 [Xu Lab](https://xulabs.github.io/), *Carnegie Mellon University*<br>
-Supervisor: [Min Xu, Ph.D.](https://xulabs.github.io/min-xu/)
+Supervisor: [Xingjian Li](https://scholar.google.com/citations?hl=en&user=f9V0NZkAAAAJ&view_op=list_works&sortby=pubdate)
 
 - Working on set-difference captioning with single-stage vision-language models.
 
