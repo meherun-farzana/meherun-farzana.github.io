@@ -99,3 +99,104 @@ author2:
   picture:           https://placehold.it/128x128
   twitter:           <username>
   github:            <username>
+# The primary author of this blog.
+# Must be the same as `author` in `_config.yml`.
+# Change `author1` to your shortname.
+author1:
+  name:              Meherun Farzana
+  email:             meherun2001@gmail.com
+
+  # Used at the bottom of each page and at the top of the `about` layout
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:             |
+    Hi! I am Meherun Farzana, a recent graduate in **Computer Science and Engineering** from [**University of Dhaka**](https://www.du.ac.bd/body/CSE). My work focuses on **natural language processing** and **AI in education**. I am currently exploring **set-difference captioning with single-stage vision-language models**, where the goal is to directly generate descriptions of how two image sets differ without relying on a separate caption-generation and text-summarization pipeline. It is very recent that I am involved in translating natural business questions into correct SQLs efficiently, which is a crucial application for various press conferences. My recent interests include:
+    - **Large Language Models**
+    - **Contextualized ML**
+    - **Computer Vision**
+    - **Multimodal Reasoning**
+    > <span class="highlight-opportunity">**I am currently seeking research collaborations, internship and entry-level opportunities worldwide. I would highly appreciate it if you would reach me out regarding any suitable opportunities at [meherun2001@gmail.com](mailto:meherun2001@gmail.com)!**</span>
+    
+
+# Open `_data/authors.yml` to edit this text.
+
+  # # This photo will be used in the about section
+  # picture:
+  #   path:            /assets/img/pfp.jpg
+  #   # srcset is optional, but can be used to provide higher res versions for retina displays
+  #   srcset:
+  #     1x:            /assets/img/pfp.jpg
+  #     2x:            /assets/img/pfp.jpg
+
+  # Social media icons in sidebar
+  # Comment/uncommet to show/hide
+  # Rearrange to change the order in which they appear
+  # You can also provide an absolute URL (starting with https://) instead of usernames
+  social:
+    twitter:         https://x.com/meherunfarzana
+    github:          https://github.com/reckless-meherun
+    email:           meherun2001@gmail.com
+    # rss:             https://<url>/feed.xml
+    linkedin:        https://linkedin.com/in/meherun-farzana
+    # instagram:       https://www.instagram.com/meherun_farzana/
+    # facebook:        https://www.facebook.com/meherun.farzana.5/
+    googlescholar: "https://scholar.google.com/citations?user=rcW_kJ4AAAAJ&hl=en"
+    # vk:              <username>
+    youtube:         https://www.youtube.com/@meherunfarzana
+    # vimeo:           <username>
+    # vine:            <username>
+    # spotify:         <user>/<number>
+    # soundcloud:      <username>
+    # lastfm:          <username>    
+    # flickr:          <string@string>
+    # 500px:           <username>
+    # dribbble:        <username>
+    # behance:         <username>
+    # deviantart:      <username>
+    # ello:            <username>
+    # twitch:          <username>
+    # steam:           <number>
+    # reddit:          <username>
+    # tumblr:          <username>
+    # pinterest:       <username>
+    # foursquare:      <number>
+    # yelp:            <string>
+    # stackoverflow:   <number/username>
+    # npm:             <username>
+    # hackernews:      <username>
+    # trello:          <firstnamelastname>
+    # xing:            <firstname_lastname_counter>
+    # blogger:         <number>
+    # delicious:       <username>
+    # stumbleupon:     <username>
+    # paypal:          <username>
+    # download:        <url>
+    # keybase:         <username>
+    # signal:          <group-invite-code>
+    # threads:         @<username>
+    # playstation:     https://<url>
+    # messenger:       https://<url>
+    # stripe:          https://<url>
+    # slack:           https://<url>
+    # gitlab:          <username>
+    # line:            <username>
+    # medium:          <path>
+    # xbox:            <gamer-tag>
+    # wechat:          https://<url>
+    # discord:         <invite-code>
+    # mastodon:        https://<url>
+    # x:               <username>
+
+# Another author (optional)
+author2:
+  name:              <firtname> <lastname>
+  email:             <mail@domain.tld>
+  about:             |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    Open `_data/authors.yml` to edit this text.
+
+  picture:           https://placehold.it/128x128
+  twitter:           <username>
+  github:            <username>
