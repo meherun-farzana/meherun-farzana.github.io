@@ -8,7 +8,7 @@ description: >
     <li>Constructed a synthetic bilingual dataset for controlled training and evaluation, yielding stronger human-score agreement than several proprietary baselines.</li>
   </ul>
 image: /assets/img/publications/cognifyq_method_horizontal_2.png
-venue: <strong>ACL System Demonstration 2026</strong> <i>(Preprint)</i>
+venue: <strong>arXiv:2606.11931, 2026</strong> <i>(Preprint)</i>
 authors: <strong>Meherun Farzana*</strong>, Aniket Joarder*, Mahmudul Hasan, Md. Mosaddek Khan
 paper_link: https://arxiv.org/abs/2606.11931
 website_link: https://cognifyq.com/
