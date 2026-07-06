@@ -19,8 +19,9 @@ cover: true
 
 <h2>Education</h2>
 
-- **Jan 2022 - May 2026**  
+- **Jan 2022 - May 2026**    
   **B.Sc. in Computer Science & Engineering**, *University of Dhaka*
+  **CGPA:** 3.88 / 4.00
 
 </section>
 
